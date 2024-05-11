@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <root-path name="root" path="."/>
+    <files-path name="files" path="." />
+    <cache-path name="cache" path="." />
+    <external-path name="external" path="." />
+    <external-files-path name="name" path="path" />
+    <external-cache-path name="name" path="path" />
+</paths>
+<!--<resources>-->
+<!--    <paths xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--        <external-path name="xZyx_DCIM" path="DCIM/camerademo" />-->
+
+<!--        <external-path name="xZyx_Pictures" path="Pictures/camerademo" />-->
+
+<!--        <files-path name="xZyx_private_files" path="images" />-->
+
+<!--        <cache-path name="xZyx_private_cache" path="images" />-->
+
+<!--        <external-files-path name="xZyx_external_files" path="Pictures" />-->
+
+<!--        <external-cache-path name="xZyx_external_cache" path="" />-->
+
+<!--        <root-path name="xZyx_external_cache" path="" />-->
+<!--    </paths>-->
+<!--</resources>-->
+

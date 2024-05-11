@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--远程-->
+    <LinearLayout
+        android:id="@+id/ll_item_hp_device_banner_ycb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_item__hp_db_d_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_item_hp_db_d_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_17"
+                android:text="大青 MyBook"
+                android:textColor="@color/text_default"
+                android:textSize="@dimen/sp_13"
+                android:textStyle="bold" />
+
+            <com.duangs.signalv.SignalView
+                android:id="@+id/sv_item_hp_device_banner"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_20"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_5"
+                app:level_color="@color/blue"
+                app:primary_color="@color/white"
+                app:signal_level="4"
+                app:signal_maximum="4"
+                app:spacing="1"
+                app:unit_width="10" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_item_hp_device_banner_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="连接中"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/sp_12" />
+
+            <ImageView
+                android:id="@+id/iv_item_hp_device_banner_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/dp_15"
+                android:src="@mipmap/home_refresh" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_item_device_banner_network_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="当前网络不佳"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_item_device_banner_device_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@mipmap/home_gj_wbd" />
+
+        <com.chuzhi.xzyx.widget.BannerIndicatorView
+            android:id="@+id/banner_idv_item_hp_device_banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_15"
+            android:gravity="center"
+            app:indicator_margins="@dimen/dp_10"
+            app:indicator_normal_height="@dimen/dp_6"
+            app:indicator_normal_width="@dimen/dp_6"
+            app:indicator_select_height="@dimen/dp_6"
+            app:indicator_select_width="@dimen/dp_20" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_10">
+
+            <LinearLayout
+                android:layout_width="@dimen/dp_104"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginLeft="@dimen/dp_17"
+                android:background="@drawable/btn_green_ring_8_background"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.chuzhi.xzyx.widget.DrawView
+                    android:id="@+id/dv_item_hp_device_banner_dl"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_11"
+                    android:layout_marginLeft="@dimen/dp_4" />
+
+                <TextView
+                    android:id="@+id/tv_item_hp_device_banner_dl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_3"
+                    android:layout_weight="1"
+                    android:text="80%"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:text="剩余电量"
+                    android:textColor="@color/text_default"
+                    android:textSize="@dimen/sp_8" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/dp_104"
+                android:layout_height="@dimen/dp_32"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_16"
+                android:background="@drawable/btn_blue_ring_8_background"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_item_hp_device_banner_kl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="******"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_43"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_marginRight="@dimen/dp_3"
+                    android:background="@drawable/btn_blue_round_8_background"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_item_hp_device_banner_kl_hq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="获取口令"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_8" />
+
+                    <TextView
+                        android:id="@+id/tv_item_hp_device_banner_kl_djs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60s"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_8"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_45"
+                android:background="@mipmap/home_bg_fc"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dp_17"
+                    android:layout_marginTop="@dimen/dp_29"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_ycgk" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:text="远程管控"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_17"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:layout_marginRight="@dimen/dp_17"
+                    android:background="@drawable/btn_first_ycgk_ring_background"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_marginTop="@dimen/dp_17"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_item_hp_device_banner_spm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_item_hp_device_banner_spm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTop="@mipmap/eject_icon_spms_default"
+                                android:drawablePadding="@dimen/dp_5"
+                                android:gravity="center"
+                                android:text="锁定屏幕"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_10" />
+
+                            <com.chuzhi.xzyx.widget.OnOffView
+                                android:id="@+id/oov_item_hp_device_banner_spm"
+                                android:layout_width="@dimen/dp_45"
+                                android:layout_height="@dimen/dp_5"
+                                android:layout_marginTop="@dimen/dp_5"
+                                app:enabled="false"
+                                app:iconSize="@dimen/dp_5"
+                                app:offColor="@color/eee"
+                                app:onColor="@color/blue"
+                                app:paddingSize="1dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_item_hp_device_banner_syp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_item_hp_device_banner_syp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTop="@mipmap/eject_icon_sypms_default"
+                                android:drawablePadding="@dimen/dp_5"
+                                android:gravity="center"
+                                android:text="锁定硬盘"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_10" />
+
+                            <com.chuzhi.xzyx.widget.OnOffView
+                                android:id="@+id/oov_item_hp_device_banner_syp"
+                                android:layout_width="@dimen/dp_45"
+                                android:layout_height="@dimen/dp_5"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp_5"
+                                app:enabled="false"
+                                app:iconSize="@dimen/dp_5"
+                                app:offColor="@color/eee"
+                                app:onColor="@color/blue"
+                                app:paddingSize="1dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_item_hp_device_banner_sdn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center|right"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_item_hp_device_banner_sdn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTop="@mipmap/eject_icon_sjms_default"
+                                android:drawablePadding="@dimen/dp_5"
+                                android:gravity="center"
+                                android:text="锁定电脑"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_10" />
+
+                            <com.chuzhi.xzyx.widget.OnOffView
+                                android:id="@+id/oov_item_hp_device_banner_sdn"
+                                android:layout_width="@dimen/dp_45"
+                                android:layout_height="@dimen/dp_5"
+                                android:layout_marginTop="@dimen/dp_5"
+                                app:enabled="false"
+                                app:iconSize="@dimen/dp_5"
+                                app:offColor="@color/eee"
+                                app:onColor="@color/blue"
+                                app:paddingSize="1dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_marginTop="@dimen/dp_17"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:layout_marginBottom="@dimen/dp_17"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_item_hp_device_banner_dk"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTop="@mipmap/eject_icon_dkgl_default"
+                                android:drawablePadding="@dimen/dp_5"
+                                android:gravity="center"
+                                android:text="端口管理"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_10" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_item_hp_device_banner_xh"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTop="@mipmap/eject_icon_sjxh_default"
+                                android:drawablePadding="@dimen/dp_5"
+                                android:gravity="center"
+                                android:text="数据销毁"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_10" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_item_hp_device_banner_bd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center|right"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_item_hp_device_banner_bd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableTop="@mipmap/eject_icon_bdms_default"
+                                android:drawablePadding="@dimen/dp_5"
+                                android:gravity="center"
+                                android:text="被盗模式"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_10" />
+
+                            <com.chuzhi.xzyx.widget.OnOffView
+                                android:id="@+id/oov_item_hp_device_banner_bd"
+                                android:layout_width="@dimen/dp_45"
+                                android:layout_height="@dimen/dp_5"
+                                android:layout_marginTop="@dimen/dp_5"
+                                app:enabled="false"
+                                app:iconSize="@dimen/dp_5"
+                                app:offColor="@color/eee"
+                                app:onColor="@color/blue"
+                                app:paddingSize="1dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:layout_marginRight="@dimen/dp_8"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_item_hp_device_banner_yj_dw"
+                        android:layout_width="@dimen/dp_175"
+                        android:layout_height="@dimen/dp_70"
+                        android:background="@mipmap/home_yjdw"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_38"
+                            android:layout_marginTop="@dimen/dp_12"
+                            android:text="一键定位"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_12" />
+
+                        <TextView
+                            android:id="@+id/tv_item_hp_device_banner_yj_dw"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_38"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:text="定位中"
+                            android:textColor="#3d3d3d"
+                            android:textSize="@dimen/sp_10" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_item_hp_device_banner_dz_wl"
+                        android:layout_width="@dimen/dp_172"
+                        android:layout_height="@dimen/dp_70"
+                        android:background="@mipmap/home_dzwl"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_40"
+                            android:layout_marginTop="@dimen/dp_12"
+                            android:text="电子围栏"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_12" />
+
+                        <TextView
+                            android:id="@+id/tv_item_hp_device_banner_dz_wl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_40"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:text="暂无围栏"
+                            android:textColor="#ff0000"
+                            android:textSize="@dimen/sp_10" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_item_hp_device_banner_status_loading"
+                android:layout_width="@dimen/dp_47"
+                android:layout_height="@dimen/dp_47"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_21"
+                android:src="@mipmap/loding_icon"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_item_hp_device_banner_status"
+                android:layout_width="@dimen/dp_47"
+                android:layout_height="@dimen/dp_47"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_21"
+                android:src="@mipmap/home_icon_kjbj_default" />
+
+        </RelativeLayout>
+
+        <!--作废隐藏-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginTop="@dimen/dp_15"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_35"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitStart"
+                        android:src="@mipmap/home_icon_kjbj_default" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_35"
+                            android:layout_height="@dimen/dp_35"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/dp_7"
+                            android:src="@mipmap/home_icon_kj_default" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_item_hp_device_banner"
+                            android:layout_width="@dimen/dp_35"
+                            android:layout_height="@dimen/dp_35"
+                            android:descendantFocusability="blocksDescendants"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/iv_item_hp_device_banner"
+                                android:layout_width="@dimen/dp_12"
+                                android:layout_height="@dimen/dp_15"
+                                android:background="@drawable/device_arrow_animation"
+                                android:focusable="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:orientation="horizontal">
+                    <!--电量 切换登录-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.chuzhi.xzyx.widget.MyTextView
+                            android:id="@+id/tv_item_hp_device_banner_kj_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_default"
+                            android:textSize="@dimen/sp_12" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_35"
+                            android:layout_marginTop="@dimen/dp_40"
+                            android:background="@drawable/btn_green_ring_30_background"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ProgressBar
+                                    android:id="@+id/pgb_item_hp_device_banner"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="@dimen/dp_35"
+                                    android:layout_height="@dimen/dp_35"
+                                    android:indeterminateTint="#2AE93A"
+                                    android:max="100"
+                                    android:progress="50"
+                                    android:progressDrawable="@drawable/widget_pg_style" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_15"
+                                    android:layout_height="@dimen/dp_18"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@mipmap/home_icon_dl" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:layout_marginRight="@dimen/dp_12"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="获取中"
+                                    android:textColor="@color/green"
+                                    android:textSize="@dimen/sp_12"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="剩余电量"
+                                    android:textColor="@color/text_default"
+                                    android:textSize="@dimen/sp_9" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--扫码登录-->
+                        <LinearLayout
+                            android:id="@+id/ll_item_hp_device_banner_scan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_35"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:background="@drawable/btn_default_ring_30_fff_background"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:id="@+id/ll_item_hp_device_banner_scan_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_35"
+                                android:background="@drawable/btn_default_round_30_background"
+                                android:gravity="center|left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_28"
+                                    android:layout_height="@dimen/dp_28"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/dp_10"
+                                    android:src="@mipmap/scan_icon_hp_white" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_10"
+                                    android:layout_marginRight="@dimen/dp_10"
+                                    android:text="手机扫码登录"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/sp_12" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_item_hp_device_banner_scan_qh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/dp_10"
+                                    android:ems="1"
+                                    android:text="AZ"
+                                    android:textColor="@color/text_default"
+                                    android:textSize="@dimen/sp_10" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="@dimen/dp_5"
+                                    android:src="@mipmap/up_arrow_delault" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <!--动态口令-->
+                        <LinearLayout
+                            android:id="@+id/ll_item_hp_device_banner_kl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:background="@drawable/btn_default_ring_30_fff_background"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:id="@+id/ll_item_hp_device_banner_kl_qh"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_28"
+                                    android:layout_height="@dimen/dp_28"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/dp_10"
+                                    android:layout_marginRight="@dimen/dp_10"
+                                    android:src="@mipmap/scan_icon_hp" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_item_hp_device_banner_kl_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_35"
+                                android:background="@drawable/btn_default_round_30_background"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_10"
+                                    android:text="动态口令登录"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/sp_12" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_10"
+                                    android:ems="1"
+                                    android:text="AZ"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/sp_10" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/dp_5"
+                                    android:src="@mipmap/up_arrow_white" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <!--单独动态口令-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_35"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:background="@drawable/btn_blue_round_30_background"
+                            android:gravity="center|left"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_5"
+                                android:layout_marginRight="@dimen/dp_3"
+                                android:text="动态口令"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_10" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/dp_3"
+                                    android:gravity="center"
+                                    android:text="******"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/sp_12"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/dp_5"
+                                    android:ems="2"
+                                    android:text="点击\n获取"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/sp_9" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/dp_5"
+                                    android:text="60s"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/sp_9"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:src="@mipmap/home_gj_wbd" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--单机-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/rlt_item_hp_device_banner_djb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_item__hp_db_d_title_djb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_item_hp_db_d_name_djb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_15"
+                android:text="大青 MyBook"
+                android:textColor="@color/text_default"
+                android:textSize="@dimen/sp_13"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_15"
+                android:text="单机版"
+                android:textColor="@color/blue" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_item_device_banner_djb_zwt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_200"
+            android:padding="@dimen/dp_15"
+            android:src="@drawable/bdsb_dn" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginLeft="@dimen/dp_60"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_60"
+            android:background="@drawable/btn_blue_round_30_background">
+
+            <TextView
+                android:id="@+id/tv_item_hp_device_banner_kl_djb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="获 取 口 令"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/tv_item_hp_device_banner_kl_djs_djb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_15"
+                android:text="60s"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_720"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

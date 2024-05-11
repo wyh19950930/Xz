@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="15dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:background="@drawable/btn_white_round_background">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="设备信息"
+            android:textColor="@color/text_default"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SN1:"
+                android:textSize="16sp"
+                android:textColor="@color/text_default"/>
+            <TextView
+                android:id="@+id/et_pop_add_device_sn"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="xx_xx_xx_xxx"
+                android:textColor="@color/gray"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/sp_14"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SN2:"
+                android:textSize="16sp"
+                android:textColor="@color/text_default"/>
+            <TextView
+                android:id="@+id/et_pop_add_device_sn2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="xx_xx_xx_xxx"
+                android:textColor="@color/gray"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/sp_14"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="机型:"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_default"/>
+                <TextView
+                    android:id="@+id/tv_pop_add_device_model"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="澜盾xxxxxxxxxxxxxxxxxxx"
+                    android:textColor="@color/text_default"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <com.chuzhi.xzyx.widget.RoundImageViewPlus
+                android:id="@+id/iv_pop_add_device_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_25"
+                android:layout_marginRight="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_25"
+                app:leftTopRadius="5dp"
+                app:leftBottomRadius="5dp"
+                app:rightTopRadius="5dp"
+                app:rightBottomRadius="5dp"
+                android:src="@mipmap/home_kj_wbd"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设备名称"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_default"
+                    android:textStyle="bold"/>
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/et_eeeeee_kuang_background">
+
+                    <EditText
+                        android:id="@+id/et_pop_add_device_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:hint="请输入设备名称"
+                        android:paddingRight="@dimen/dp_20"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/text_default"
+                        android:maxLength="10"
+                        android:background="@null"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/modify_icon_default"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <android.widget.Button
+                android:id="@+id/btn_pop_add_device_upload"
+                android:layout_width="@dimen/dp_120"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:text="绑 定"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/btn_blue_round_5_background"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

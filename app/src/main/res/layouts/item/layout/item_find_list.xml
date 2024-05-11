@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:background="@drawable/btn_white_round_background"
+    android:orientation="vertical">
+
+    <com.chuzhi.xzyx.widget.RoundImageViewPlus
+        android:id="@+id/iv_item_find_frag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftTopRadius="@dimen/dp_10"
+        app:leftBottomRadius="0dp"
+        app:rightTopRadius="@dimen/dp_10"
+        app:rightBottomRadius="0dp"
+        android:src="@drawable/find_zwt_img"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_8"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_item_find_head"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:src="@drawable/my_img_portrait_default" />
+
+        <TextView
+            android:id="@+id/tv_item_find_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_3"
+            android:layout_weight="1"
+            android:text="小志空间"
+            android:textColor="@color/text_default"
+            android:ellipsize="end"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:maxLength="11"/>
+
+        <android.widget.Button
+            android:visibility="gone"
+            android:id="@+id/btn_item_find_follower"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_16"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_default_ring_30_background"
+            android:text="关注"
+            android:textSize="@dimen/sp_8" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_item_find_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_32"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_3"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_3"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textSize="@dimen/sp_10"
+        android:textColor="@color/gray"
+        android:text="北京初志发布的小志空间真牛逼！！！！！" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:layout_weight="1">
+
+            <com.chuzhi.xzyx.widget.DrawableCenterTextView
+                android:id="@+id/tv_item_find_article_praise_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:drawableLeft="@mipmap/detail_icon_praise_default"
+                android:drawablePadding="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_10"
+                android:text="0"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <com.chuzhi.xzyx.widget.DrawableCenterTextView
+                android:id="@+id/tv_item_find_answers_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:drawableLeft="@mipmap/detail_icon_comment_default"
+                android:drawablePadding="@dimen/dp_5"
+                android:text="0"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center|right"
+            android:layout_weight="1">
+
+            <com.chuzhi.xzyx.widget.DrawableCenterTextView
+                android:id="@+id/tv_item_find_read_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:drawableLeft="@mipmap/detail_icon_browse_default"
+                android:drawablePadding="@dimen/dp_5"
+                android:text="0"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_8" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

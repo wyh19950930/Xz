@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="radius" format="dimension" />
+        <attr name="leftTopRadius" format="dimension" />
+        <attr name="rightTopRadius" format="dimension" />
+        <attr name="leftBottomRadius" format="dimension" />
+        <attr name="rightBottomRadius" format="dimension" />
+    </declare-styleable>
+
+    <!-- banner indicator -->
+    <declare-styleable name="BannerIndicatorView">
+        <!-- 显示多少个 indicator -->
+        <attr name="indicator_count" format="integer" />
+        <!-- indicator 宽高 -->
+        <attr name="indicator_select_width" format="dimension" />
+        <attr name="indicator_select_height" format="dimension" />
+        <attr name="indicator_normal_width" format="dimension" />
+        <attr name="indicator_normal_height" format="dimension" />
+        <!-- indicator 之间边距 -->
+        <attr name="indicator_margins" format="dimension" />
+        <!-- indicator 颜色 -->
+        <attr name="indicator_select_color" format="reference" />
+        <attr name="indicator_normal_color" format="reference" />
+        <attr name="indicator_radius" format="dimension" />
+
+    </declare-styleable>
+
+    <declare-styleable name="OnOffView" >
+        <attr name="offColor" format="color"/>   <!--开关关闭时颜色-->
+        <attr name="onColor" format="color"/>    <!--打开时颜色-->
+        <attr name="backWith" format="dimension"/>    <!--可以不要~~-->
+        <attr name="iconSize" format="dimension"/>    <!--小图标大小-->
+        <attr name="paddingSize" format="dimension"/>    <!--间距-->
+        <attr name="defOff" format="boolean"/>      <!--默认状态-->
+        <attr name="enabled" format="boolean"/>      <!--是否可点击-->
+    </declare-styleable>
+
+    <declare-styleable name="RoundRelativeLayout">
+        <attr name="mapRadius" format="dimension" />
+    </declare-styleable>
+</resources>

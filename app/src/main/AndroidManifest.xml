@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.chuzhi.xzyx">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" /> <!-- 获取模拟定位信息，一般用于帮助开发者调试应用 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PERMISSION_GRANTED" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> <!-- <uses-permission android:name="android.permission.RECEIVE_SMS" /> &lt;!&ndash; 获取短信 &ndash;&gt; -->
+    <!-- <uses-permission android:name="android.permission.READ_SMS" /> -->
+    <uses-permission
+        android:name="android.permission.WRITE_MEDIA_STORAGE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Android 13版本适配，细化存储权限 -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" /> <!-- Android 11 使用相机 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- 后台保活 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- <uses-permission android:name="android.permission.CALL_PHONE" /> -->
+    <!-- <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/> -->
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" /> <!-- 后台运行权限 -->
+    <!-- <uses-permission android:name="android.permission.READ_CALL_LOG"/> -->
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <queries package="${applicationId}">
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <intent>
+            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:allowNativeHeapPointerTagging="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/app_icon_desktop"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Xzyx">
+        <activity android:name=".ui.activity.me.SMBActivity"></activity>
+        <activity android:name=".ui.activity.me.DynamicActivity" />
+        <activity android:name=".ui.activity.me.NetWorkSignalActivity" />
+        <activity
+            android:name=".ui.activity.me.GoogleMapActivity"
+            android:exported="true" />
+        <activity android:name=".ui.activity.me.LogOffCodeActivity" />
+        <activity android:name=".ui.activity.me.LogOffXzActivity" />
+        <activity android:name=".ui.activity.me.LogOffActivity" />
+        <activity android:name=".ui.activity.me.AccountSecurityActivity" />
+        <activity android:name=".ui.activity.me.UserAgreementActivity" />
+        <activity android:name=".ui.activity.login.ForgotPwdActivity" />
+        <activity android:name=".ui.mqtt.MqttActivity" />
+        <activity android:name=".ui.activity.me.AboutActivity" />
+        <activity android:name=".ui.activity.me.MyReplyActivity" />
+        <activity
+            android:name=".ui.activity.me.PrivacyPolicyActivity"
+            android:label="@string/title_activity_privacy_policy"
+            android:theme="@style/Theme.Xzyx.NoActionBar" />
+        <activity android:name=".ui.activity.me.SecuritySettingActivity" />
+        <activity android:name=".ui.activity.me.MyReleaseActivity" />
+        <activity android:name=".ui.activity.homepage.TrackNavigationActivity" />
+        <activity android:name=".ui.activity.homepage.TrackDetailsActivity" />
+        <activity android:name=".ui.activity.homepage.TrackListActivity" />
+        <activity android:name=".ui.activity.homepage.FenceSettingActivity" />
+        <activity android:name=".ui.activity.homepage.FenceListActivity" />
+        <activity android:name=".ui.activity.me.DeviceManageActivity" />
+        <activity android:name=".ui.activity.homepage.LocationTrackingActivity" />
+        <activity android:name=".ui.activity.homepage.PortManagementActivity" />
+        <activity android:name=".ui.activity.homepage.SecurityLogActivity" />
+        <activity android:name=".ui.activity.homepage.ScanQRCodeActivity" />
+        <activity
+            android:name=".ui.activity.homepage.HPAddDeviceActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name=".ui.activity.find.ReleaseMessageActivity" />
+        <activity android:name=".ui.activity.login.RegisterActivity" />
+        <activity android:name=".ui.activity.find.FindDetailsActivity" />
+        <activity android:name=".ui.activity.me.ChangePwdActivity" />
+        <activity android:name=".ui.activity.login.CodeActivity" />
+        <activity android:name=".ui.activity.me.MeInformationActivity" />
+        <activity
+            android:name=".ui.activity.login.LoginActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:configChanges="screenSize|orientation|smallestScreenSize|screenLayout"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.activity.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 添加provider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="65fa0224a0e1b02d13eaf16247811b8a" /> <!-- dc4e3f42b93d34e76040f6d5f74f23ab -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity
+            android:name="com.amap.api.navi.AmapRouteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!--
+<receiver
+            android:name="com.chuzhi.xzyx.ui.service.KeepAliveReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="myAction" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.chuzhi.xzyx.ui.service.KeepAliveService"
+            android:exported="false" /> &lt;!&ndash; mqtt &ndash;&gt;
+        -->
+        <!-- <receiver -->
+        <!-- android:name=".ui.service.NetWorkReceiver" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+        <!-- <action android:name="myAction" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <service
+            android:name=".ui.service.DownloadIntentService"
+            android:exported="false" />
+        <service
+            android:name=".ui.service.NetWoekService"
+            android:exported="false" />
+        <service android:name="org.eclipse.paho.android.service.MqttService" /> <!-- MqttService -->
+        <service
+            android:name=".ui.mqtt.MQTTService"
+            android:enabled="true" /> <!-- 友盟多渠道 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${channel}" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDS8Z4PWNQ7wS4KvAQJ7TjODltn_m8mekU" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.login.CodeActivity">
+
+    <include
+        android:id="@+id/include_act_code"
+        layout="@layout/include_title"/>
+
+   <TextView
+        android:id="@+id/tv_act_code_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerVertical="true"
+        android:text="请输入验证码"
+        android:textColor="@color/text_default"
+        android:textStyle="bold"
+        android:textSize="23sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="验证码已发送至"
+            android:textColor="@color/gray"/>
+
+        <TextView
+            android:id="@+id/tv_act_code_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_default"
+            android:layout_marginLeft="5dp"
+            android:text=""/>
+
+    </LinearLayout>
+
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginLeft="30dp"
+         android:layout_marginTop="30dp"
+         android:layout_marginRight="30dp"
+        android:orientation="horizontal">
+
+         <com.chuzhi.xzyx.widget.VerifyCodeView
+             android:id="@+id/vcv_act_code"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             />
+
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_act_code_s"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+            <TextView
+                android:id="@+id/tv_act_code_s"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="3dp"
+                android:gravity="center"
+                android:text="59"
+                android:textColor="@color/blue"/>
+            <TextView
+                android:id="@+id/tv_act_code_again"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:text="秒后重新发送验证码"/>
+        </LinearLayout>
+
+
+
+    <com.dd.processbutton.iml.ActionProcessButton
+        android:visibility="gone"
+        android:id="@+id/btn_act_code_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="60dp"
+        android:text="登录"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        custom:pb_colorComplete="@color/blue"
+        custom:pb_colorError="@color/red_error"
+        custom:pb_colorNormal="@color/blue"
+        app:pb_colorPressed="@color/blue"
+        custom:pb_cornerRadius="5dp"
+        custom:pb_textError="登录失败"
+        custom:pb_textProgress="登录中"/>
+
+</LinearLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".ui.activity.homepage.TrackNavigationActivity">
+
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map_act_track_nav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <include
+        android:id="@+id/include_act_track_nav"
+        layout="@layout/include_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_yy_background"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:gravity="center"
+                android:background="@drawable/btn_grey_oval_background">
+
+                <com.chuzhi.xzyx.widget.RoundImageViewPlus
+                    android:layout_width="@dimen/dp_45"
+                    android:layout_height="@dimen/dp_45"
+                    android:src="@mipmap/track_icon_computer"
+                    app:leftTopRadius="@dimen/dp_30"
+                    app:leftBottomRadius="@dimen/dp_30"
+                    app:rightTopRadius="@dimen/dp_30"
+                    app:rightBottomRadius="@dimen/dp_30"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:gravity="center|left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_act_track_nav_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_3"
+                    android:text="设备名称获取中"
+                    android:textColor="@color/text_default"
+                    android:textSize="@dimen/sp_15"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/btn_blue_round_30_background"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/dp_10"
+                        android:layout_height="@dimen/dp_13"
+                        android:src="@mipmap/home_icon_dl"
+                        android:layout_marginLeft="@dimen/dp_6"/>
+                    <TextView
+                        android:id="@+id/tv_act_track_nav_dl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_12"
+                        android:text="电量获取中"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_act_track_nav_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="共计xx公里"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/text_default"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_30"
+                android:src="@mipmap/track_icon_indicia"/>
+            <TextView
+                android:id="@+id/tv_act_track_nav_city"
+                android:layout_weight="1"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:text="定位中"
+                android:textColor="@color/text_default"
+                android:textSize="@dimen/sp_15"/>
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="距离4.8km"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/text_default"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_act_track_nav_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp_12"
+            tools:text="位置获取中"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@color/eee"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <RadioGroup
+                android:id="@+id/rgp_act_track_nav"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbt_act_track_nav_walk"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:paddingRight="@dimen/dp_10"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/track_nav_item_color"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/select_track_nav_walk"
+                    android:background="@drawable/select_track_nav_background"
+                    android:text="步行"
+                    />
+                <RadioButton
+                    android:id="@+id/rbt_act_track_nav_ride"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:paddingRight="@dimen/dp_10"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/track_nav_item_color"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/select_track_nav_ride"
+                    android:background="@drawable/select_track_nav_background"
+                    android:text="骑行"
+                    />
+                <RadioButton
+                    android:id="@+id/rbt_act_track_nav_drive"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:paddingRight="@dimen/dp_10"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/track_nav_item_color"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/select_track_nav_drive"
+                    android:background="@drawable/select_track_nav_background"
+                    android:text="驾车"
+                    />
+
+            </RadioGroup>
+        </LinearLayout>
+        <android.widget.Button
+            android:visibility="gone"
+            android:id="@+id/btn_act_track_nav"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/btn_blue_round_30_background"
+            android:textColor="@color/white"
+            android:text="导航"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

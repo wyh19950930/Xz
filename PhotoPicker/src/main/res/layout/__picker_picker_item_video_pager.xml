@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<ScrollView -->
+    <!--android:orientation="vertical"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:fillViewport="true"-->
+    <!--&gt;-->
+    <!--ConstraintLayout-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingConstraints"
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rjhj_cl_map_act_video">
+  <VideoView
+      android:gravity="center"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:src="@drawable/__picker_ic_photo_black_48dp"
+      android:id="@+id/iv_pager_video"
+      />
+  <TextView
+      android:id="@+id/tv_if_dk"
+      android:textSize="115sp"
+      android:textColor="#00ff00"
+      android:text="+"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"/>
+</RelativeLayout>
+
+<!--</ScrollView>-->

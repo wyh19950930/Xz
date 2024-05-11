@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.homepage.ScanQRCodeActivity">
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/dbv_custom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:zxing_framing_rect_height="200dp"
+        app:zxing_framing_rect_width="200dp"
+        app:zxing_preview_scaling_strategy="fitXY"
+        app:zxing_use_texture_view="true" >
+
+
+        <com.github.zagum.switchicon.SwitchIconView
+            android:id="@+id/switch_light"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginBottom="45dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="200dp"
+            app:layout_constraintBottom_toBottomOf="@+id/dbv_custom"
+            app:layout_constraintEnd_toEndOf="@+id/dbv_custom"
+            app:layout_constraintStart_toStartOf="@+id/dbv_custom"
+            app:si_animation_duration="200"
+            app:si_disabled_alpha=".3"
+            app:si_disabled_color="@color/white"
+            app:si_enabled="false"
+            app:si_no_dash="true"
+            app:si_tint_color="@color/state_on"
+            app:srcCompat="@drawable/ic_torch" />
+
+    </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/iv_act_scan_qr_code_back"
+            android:src="@drawable/ic_white_back"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:textColor="@color/white"
+            android:layout_marginLeft="7dp"
+            android:layout_gravity="center_vertical"
+            android:text="设备二维码"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

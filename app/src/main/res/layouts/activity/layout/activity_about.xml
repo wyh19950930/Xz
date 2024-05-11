@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_act_about_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.me.AboutActivity">
+
+    <include
+        android:id="@+id/include_act_about"
+        layout="@layout/include_title"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="@color/eee"/>
+
+    <com.chuzhi.xzyx.widget.RoundImageViewPlus
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_100"
+        android:src="@mipmap/start_logo"
+        app:leftTopRadius="@dimen/dp_30"
+        app:leftBottomRadius="@dimen/dp_30"
+        app:rightTopRadius="@dimen/dp_30"
+        app:rightBottomRadius="@dimen/dp_30"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="小志云享"
+        android:gravity="center"
+        android:textColor="@color/text_default"
+        android:textSize="@dimen/sp_15"
+        android:layout_marginTop="@dimen/dp_5"/>
+
+    <LinearLayout
+        android:id="@+id/ll_act_about_update"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_act_about_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前版本：1.0.1"
+            android:textColor="@color/text_default"
+            android:textSize="@dimen/sp_10"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_3"
+            android:src="@mipmap/app_download_icon"/>
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_act_about_apk_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_3"
+            android:src="@mipmap/icon_apk_new"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:text="京ICP备11015708号-6A"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/gray"
+        android:gravity="center"/>
+</LinearLayout>

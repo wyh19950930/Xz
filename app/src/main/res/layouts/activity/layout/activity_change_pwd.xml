@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".ui.activity.me.ChangePwdActivity">
+
+
+    <include
+        android:id="@+id/include_act_change_pwd"
+        layout="@layout/include_title" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_edittext_round_30_background"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/et_act_change_old_pwd"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_edittext_round_30_background"
+            android:inputType="textPassword"
+            android:hint="输入原始密码"
+            android:paddingLeft="30dp"
+            android:maxLines="1"
+            android:maxLength="20"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/text_default"/>
+        <CheckBox
+            android:id="@+id/cb_act_change_old_pwd"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:background="@drawable/password_show_selector"
+            android:button="@null"
+            android:layout_marginRight="@dimen/dp_15"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_edittext_round_30_background"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/et_act_change_new_pwd"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/btn_edittext_round_30_background"
+            android:inputType="textPassword"
+            android:hint="输入新密码（格式为6-20位数字加字母）"
+            android:paddingLeft="30dp"
+            android:maxLines="1"
+            android:maxLength="20"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/text_default" />
+        <CheckBox
+            android:id="@+id/cb_act_change_new_pwd"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:background="@drawable/password_show_selector"
+            android:button="@null"
+            android:layout_marginRight="@dimen/dp_15"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_edittext_round_30_background"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/et_act_change_again_new_pwd"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/btn_edittext_round_30_background"
+            android:inputType="textPassword"
+            android:hint="再次输入新密码（格式为6-20位数字加字母）"
+            android:paddingLeft="30dp"
+            android:maxLines="1"
+            android:maxLength="20"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/text_default" />
+        <CheckBox
+            android:id="@+id/cb_act_change_again_new_pwd"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:background="@drawable/password_show_selector"
+            android:button="@null"
+            android:layout_marginRight="@dimen/dp_15"
+            />
+    </LinearLayout>
+
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <android.widget.Button
+        android:id="@+id/btn_act_change_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/btn_blue_round_30_background"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</LinearLayout>

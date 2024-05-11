@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_act_device_manage_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.me.DeviceManageActivity">
+
+    <include
+        android:id="@+id/include_act_device_manage"
+        layout="@layout/include_title"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/ll_act_device_manage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <com.yanzhenjie.recyclerview.SwipeRecyclerView
+                    android:id="@+id/rlv_act_device_manage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp" />
+
+
+            </LinearLayout>
+            <include
+                android:id="@+id/include_act_device_manage_none_data"
+                layout="@layout/include_none_data"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/btn_act_device_manage_add"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35"
+        android:layout_marginLeft="@dimen/dp_35"
+        android:layout_marginRight="@dimen/dp_35"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:text="添加设备"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"
+        android:background="@drawable/btn_blue_round_30_background"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        android:text="侧滑条目解绑设备"/>
+
+</LinearLayout>

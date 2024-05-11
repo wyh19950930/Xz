@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_frag_h_p_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/home_kj_bg"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.homepage.HPDeviceFragment">
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_frag_h_p_network_type"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:background="@color/translucent"
+        android:gravity="center"
+        android:text="当前无网络"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"/>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ll_frag_hp_ybd"
+        android:fillViewport="true"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_transparent_round_15_background"
+                android:orientation="vertical">
+                <include
+                    android:visibility="gone"
+                    android:id="@+id/include_frag_hp_device"
+                    layout="@layout/include_none_data"/>
+
+
+                <com.chuzhi.xzyx.widget.NestedScrollableHost
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:visibility="gone"
+                        android:id="@+id/rlv_frag_hp_device"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.zhpan.bannerview.BannerViewPager
+                            android:id="@+id/banner_vp_frag_hp_device"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </RelativeLayout>
+
+                    <com.youth.banner.Banner
+                        android:visibility="gone"
+                        android:id="@+id/banner_frag_hp_device"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        app:layout_scrollFlags="scroll"/>
+
+                </com.chuzhi.xzyx.widget.NestedScrollableHost>
+                <com.chuzhi.xzyx.widget.BannerIndicatorView
+                    android:visibility="gone"
+                    android:id="@+id/banner_idv_frag_hp_device"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:gravity="center"
+                    app:indicator_margins="@dimen/dp_10"
+                    app:indicator_select_width="@dimen/dp_20"
+                    app:indicator_select_height="@dimen/dp_6"
+                    app:indicator_normal_width="@dimen/dp_6"
+                    app:indicator_normal_height="@dimen/dp_6"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_weight="2.4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/btn_transparent_round_15_background"
+                    android:orientation="vertical">
+
+                    <!--地图-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvw_frag_hp_device"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_15"
+                        app:cardCornerRadius="@dimen/dp_15">
+
+                        <com.amap.api.maps.MapView
+                            android:id="@+id/map_frag_hp_device"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </androidx.cardview.widget.CardView>
+                    <!--安全日志 端口管理-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_110"
+                        android:layout_marginLeft="@dimen/dp_2"
+                        android:layout_marginRight="@dimen/dp_2"
+                        android:background="@drawable/btn_transparent_round_15_background"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/btn_frag_hp_device_aq"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@mipmap/home_button_aqrz">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_30"
+                                android:layout_height="@dimen/dp_30"
+                                android:layout_marginBottom="@dimen/dp_8"
+                                android:src="@mipmap/home_icon_rz_default"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="安全日志"
+                                android:textSize="@dimen/sp_14"
+                                android:textColor="@color/white"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/btn_frag_hp_device_dk"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@mipmap/home_button_dkgl">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_30"
+                                android:layout_height="@dimen/dp_30"
+                                android:layout_marginBottom="@dimen/dp_8"
+                                android:src="@mipmap/home_icon_dk_default"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="端口管理"
+                                android:textSize="@dimen/sp_14"
+                                android:textColor="@color/white"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <include
+        android:visibility="gone"
+        android:id="@+id/include_frag_wbd"
+        layout="@layout/include_hp_binding"/>
+</LinearLayout>

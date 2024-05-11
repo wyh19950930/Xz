@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_act_me_info_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.activity.me.MeInformationActivity">
+
+    <include
+        android:id="@+id/include_act_information"
+        layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/include_act_information"
+        android:layout_weight="1"
+        android:background="#f9f9f9">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <LinearLayout
+                android:id="@+id/ll_act_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_50"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@drawable/home_bg_bottom"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_act_me_info_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:background="@drawable/btn_edittext_round_30_background"
+                    android:hint="请输入昵称"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <android.widget.Button
+                    android:id="@+id/btn_act_me_info_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:background="@drawable/btn_edittext_round_30_background"
+                    android:gravity="center|left"
+                    android:hint="请选择生日"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <android.widget.Button
+                    android:id="@+id/btn_act_me_info_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:background="@drawable/btn_edittext_round_30_background"
+                    android:gravity="center|left"
+                    android:hint="请选择地区"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <RadioGroup
+                    android:id="@+id/rgp_act_me_info_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbt_act_me_info_man"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/select_sex_background"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/select_sex_man"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_5"
+                        android:text="男生"
+                        android:textColor="@color/track_nav_item_color"
+                        android:textSize="@dimen/sp_12" />
+
+                    <RadioButton
+                        android:id="@+id/rbt_act_me_info_woman"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_weight="1"
+                        android:background="@drawable/select_sex_background"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/select_sex_woman"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_5"
+                        android:text="女生"
+                        android:textColor="@color/track_nav_item_color"
+                        android:textSize="@dimen/sp_12" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlt_act_me_info_head"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_90"
+                android:layout_centerHorizontal="true">
+                <ImageView
+                    android:id="@+id/iv_act_me_info_head"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:scaleType="center"
+                    android:src="@drawable/my_img_portrait_default" />
+                <ImageView
+                    android:id="@+id/iv_act_me_info_head_add"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:src="@mipmap/my_icon_plus_highlight"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f9f9f9">
+
+        <android.widget.Button
+            android:id="@+id/btn_act_me_info_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/btn_blue_round_30_background"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+
+
+</LinearLayout>

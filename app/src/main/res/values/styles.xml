@@ -1,0 +1,88 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="textview_style">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--jymj弹出框-->
+    <style name="anim_popu_zoom">
+        <item name="android:windowEnterAnimation">@anim/popu_zoomin</item>
+        <item name="android:windowExitAnimation">@anim/popu_zoomout</item>
+    </style>
+    <!-- 自定义仿IOS的AlertDialog的样式 -->
+    <style name="AlertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="tv_frame_dddd">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/tv_frame_ddd_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_default</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="tv_frame_f8f8f8">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/tv_frame_f8f8_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/dp_5</item>
+        <item name="android:textColor">@color/text_default</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+    <style name="tv_p_p_title">
+        <item name="android:textColor">@color/text_default</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:layout_marginTop">@dimen/dp_10</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+    <style name="tv_p_p_content">
+        <item name="android:textColor">@color/text_default</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:layout_marginTop">@dimen/dp_10</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+
+    <!-- 自定义loading dialog -->
+    <style name="loading_dialog" parent="android:style/Theme.Dialog" >
+        <item name="android:windowFrame"> @null</item>
+        <item name="android:windowNoTitle"> true</item>
+        <item name="android:windowBackground"> @color/white</item>
+        <item name="android:windowIsFloating"> true</item>
+        <item name="android:windowContentOverlay"> @null</item>
+    </style>
+
+    <!--对勾动画-->
+    <declare-styleable name="CustomTickView">
+        <!--选中情况下基本颜色-->
+        <attr name="check_base_color" format="color" />
+        <!--选中情况下对号颜色-->
+        <attr name="check_tick_color" format="color" />
+        <!--未选中情况下基本颜色-->
+        <attr name="uncheck_base_color" format="color" />
+        <!--未选中情况下对号颜色-->
+        <attr name="uncheck_tick_color" format="color" />
+        <!--自定义动画执行时间-->
+        <attr name="custom_duration" format="integer" />
+        <!--控件大小-->
+        <attr name="custom_size" format="dimension" />
+    </declare-styleable>
+
+
+</resources>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.me.SecuritySettingActivity">
+
+    <include
+        android:id="@+id/include_act_security_set"
+        layout="@layout/include_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:text="设备绑定"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/text_default"
+            android:gravity="center|left"
+            android:layout_marginLeft="@dimen/dp_15"/>
+
+
+        <com.chuzhi.xzyx.widget.OnOffView
+            android:id="@+id/on_off_act_security_set_bd"
+            android:layout_width="@dimen/dp_55"
+            android:layout_height="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_15"
+            app:offColor="@color/eee"
+            app:onColor="@color/text_default"
+            app:paddingSize="3dp"
+            app:iconSize="@dimen/dp_25"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="@color/eee"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自动将SSD和主板进行绑定"
+        android:textColor="@color/gray"
+        android:layout_marginLeft="@dimen/dp_30"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:text="异机销毁"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/text_default"
+            android:gravity="center|left"
+            android:layout_marginLeft="@dimen/dp_15"/>
+
+
+        <com.chuzhi.xzyx.widget.OnOffView
+            android:id="@+id/on_off_act_security_set_xh"
+            android:layout_width="@dimen/dp_55"
+            android:layout_height="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_15"
+            app:offColor="@color/eee"
+            app:onColor="@color/text_default"
+            app:paddingSize="3dp"
+            app:iconSize="@dimen/dp_25"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="@color/eee"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="硬盘(SSD)拔掉后插入其他设备上进行数据销毁"
+        android:textColor="@color/gray"
+        android:layout_marginLeft="@dimen/dp_30"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:text="销毁提醒"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/text_default"
+            android:gravity="center|left"
+            android:layout_marginLeft="@dimen/dp_15"/>
+
+
+        <com.chuzhi.xzyx.widget.OnOffView
+            android:id="@+id/on_off_act_security_set_tx"
+            android:layout_width="@dimen/dp_55"
+            android:layout_height="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_15"
+            app:offColor="@color/eee"
+            app:onColor="@color/text_default"
+            app:paddingSize="3dp"
+            app:iconSize="@dimen/dp_25"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="@color/eee"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="数据自动销毁时消息提醒"
+        android:textColor="@color/gray"
+        android:layout_marginLeft="@dimen/dp_30"/>
+
+</LinearLayout>

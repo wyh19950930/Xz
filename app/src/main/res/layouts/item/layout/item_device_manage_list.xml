@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+
+    <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        android:id="@+id/swt_item_device_manage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/btn_map_window_background">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/ll_item_device_manage"
+                    android:layout_weight="1"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_item_device_manage_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_default"
+                        android:textSize="@dimen/sp_14"
+                        android:text="昵称：初志001"/>
+
+                    <TextView
+                        android:id="@+id/tv_item_device_manage_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:textColor="@color/text_default"
+                        android:textSize="@dimen/sp_14"
+                        android:text="型号：12345678"/>
+                </LinearLayout>
+
+                <android.widget.Button
+                    android:id="@+id/btn_item_device_manage"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:text="编辑昵称"
+                    android:textColor="@color/text_default"
+                    android:textSize="@dimen/sp_12"
+                    android:background="@drawable/btn_default_ring_30_background"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@color/ddd"/>
+            <LinearLayout
+                android:id="@+id/ll_item_device_manage_aq_rz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:src="@mipmap/icon_aqrz"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:textColor="@color/text_default"
+                    android:textSize="@dimen/sp_14"
+                    android:text="安全日志"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:src="@mipmap/icon_jt"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_item_device_manage_det"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@color/red"
+            android:gravity="center"
+            android:text="解绑设备"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+
+
+
+
+
+</LinearLayout>

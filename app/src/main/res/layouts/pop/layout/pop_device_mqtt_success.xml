@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/btn_white_round_15_background">
+
+    <com.chuzhi.xzyx.widget.CustomTickView
+        android:visibility="gone"
+        android:id="@+id/pop_device_mqtt_success_ctv"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_gravity="center"
+        app:check_base_color="@color/blue"
+        app:check_tick_color="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.378"
+        app:uncheck_base_color="@color/gray"
+        app:uncheck_tick_color="@color/gray"/>
+
+    <LinearLayout
+        android:id="@+id/pop_device_mqtt_success_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_white_round_15_background"
+        android:padding="@dimen/dp_10"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/pop_device_mqtt_success_dialog_img"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:scaleType="fitXY"
+            android:src="@mipmap/loding_icon" />
+
+        <TextView
+            android:id="@+id/pop_device_mqtt_success_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:maxLines="1"
+            android:text="数据同步中..."
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

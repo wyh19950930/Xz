@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_act_l_t_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".ui.activity.homepage.LocationTrackingActivity">
+
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map_act_l_t"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <include
+        android:id="@+id/include_act_track_nav"
+        layout="@layout/include_title"/>
+
+    <android.widget.Button
+        android:id="@+id/btn_act_l_t_set_fence"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_gravity="center"
+        android:ems="2"
+        android:text="设置\n围栏"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_10"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_above="@+id/btn_act_l_t_set_point"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:background="@drawable/btn_blue_round_30_background"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/btn_act_l_t_set_point"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:background="@drawable/btn_blue_round_30_background">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp_6"
+            android:src="@mipmap/track_icon_current"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_yy_background"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:gravity="center"
+                android:background="@drawable/btn_grey_oval_background">
+
+                <com.chuzhi.xzyx.widget.RoundImageViewPlus
+                    android:layout_width="@dimen/dp_45"
+                    android:layout_height="@dimen/dp_45"
+                    android:src="@mipmap/track_icon_computer"
+                    app:leftTopRadius="@dimen/dp_30"
+                    app:leftBottomRadius="@dimen/dp_30"
+                    app:rightTopRadius="@dimen/dp_30"
+                    app:rightBottomRadius="@dimen/dp_30"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:gravity="center|left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_act_l_t_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_3"
+                    android:text="设备名称获取中"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_default"
+                    android:textSize="@dimen/sp_15"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/btn_blue_round_30_background"
+                    android:orientation="horizontal">
+                    <com.chuzhi.xzyx.widget.DrawView
+                        android:id="@+id/dv_act_l_t_dl"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_8"
+                        android:src="@mipmap/home_icon_dl"
+                        android:layout_marginLeft="@dimen/dp_6"/>
+                    <TextView
+                        android:id="@+id/tv_act_l_t_dl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_12"
+                        android:text="电量获取中"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_act_l_t_yj_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="围栏预警*次"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/text_default"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_30"
+                android:src="@mipmap/track_icon_indicia"/>
+            <TextView
+                android:id="@+id/tv_act_l_t_city"
+                android:layout_weight="1"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:text="定位中"
+                android:textColor="@color/text_default"
+                android:textSize="@dimen/sp_15"/>
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="距离4.8km"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/text_default"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_act_l_t_address"
+                android:layout_weight="1"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="位置获取中"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/sp_12"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/eee"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_8"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_act_l_t_gj"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:gravity="center"
+                android:text="轨迹"
+                android:textColor="@color/gray"/>
+            <View
+                android:layout_width="@dimen/dp_0_5"
+                android:layout_height="@dimen/dp_30"
+                android:background="@color/eee"/>
+            <android.widget.Button
+                android:visibility="gone"
+                android:id="@+id/text_list_card_jb"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="警报"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_default_round_30_background"
+                />
+            <TextView
+                android:id="@+id/tv_act_l_t_zz"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:gravity="center"
+                android:text="追踪"
+                android:textColor="@color/gray"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--        <com.amap.api.maps.MapView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"/>-->
+
+
+<!--        暂时不用卡片 注释掉-->
+<!--            <ScrollView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/dp_250"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent">-->
+
+<!--                卡片-->
+<!--                <com.loopeer.cardstack.CardStackView-->
+<!--                    android:id="@+id/csv_act_l_t"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/dp_250"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"/>-->
+<!--            </ScrollView>-->
+<!--        切换卡片-->
+<!--        <LinearLayout-->
+<!--            android:visibility="gone"-->
+<!--            android:id="@+id/button_container"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="right|center_vertical"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            android:gravity="center">-->
+<!--            <android.widget.Button-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="@dimen/dp_30"-->
+<!--                android:background="@drawable/btn_default_round_30_background"-->
+<!--                android:layout_marginBottom="@dimen/dp_10"-->
+<!--                android:text="上一条"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:onClick="onPreClick"/>-->
+<!--            <android.widget.Button-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="@dimen/dp_30"-->
+<!--                android:background="@drawable/btn_default_round_30_background"-->
+<!--                android:text="下一条"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:onClick="onNextClick"/>-->
+<!--        </LinearLayout>-->
+
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <include
+        android:id="@+id/include_act_l_t"
+        layout="@layout/include_title" />
+
+
+</RelativeLayout>
